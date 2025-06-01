@@ -1,6 +1,6 @@
 [project]
 name = "diode-napalm-agent"
-version = "0.0.1"  # Overwritten during the build process
+version = "0.0.2"  # Overwritten during the build process
 description = "NetBox Labs, Diode NAPALM Agent"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -27,7 +27,7 @@ classifiers = [
 dependencies = [
     "importlib-metadata~=8.5",
     "napalm~=5.0",
-    "netboxlabs-diode-sdk~=0.4",
+    "netboxlabs-diode-sdk~=1.0",
     "pydantic~=2.9",
     "python-dotenv~=1.0",
 ]

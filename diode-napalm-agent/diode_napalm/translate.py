@@ -83,7 +83,7 @@ def translate_interface(
         device=device,
         name=if_name,
         enabled=interface_info.get("is_enabled"),
-        mac_address=interface_info.get("mac_address"),
+        primary_mac_address=interface_info.get("mac_address"),
         description=interface_info.get("description"),
     )
 
@@ -127,14 +127,14 @@ def translate_interface_ips(
                     ip_entities.append(
                         Entity(
                             prefix=Prefix(
-                                prefix=str(network), site=interface.device.site
+                                prefix=str(network), scope_site=interface.device.site
                             )
                         )
                     )
                     ip_entities.append(
                         Entity(
                             ip_address=IPAddress(
-                                address=ip_address, interface=interface
+                                address=ip_address, assigned_object_interface=interface
                             )
                         )
                     )

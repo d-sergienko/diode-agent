@@ -46,7 +46,8 @@ class DiodeConfig(BaseModel):
     """Model for Diode configuration."""
 
     target: str
-    api_key: str
+    client_id: str
+    client_secret: str
 
 
 class Diode(BaseModel):

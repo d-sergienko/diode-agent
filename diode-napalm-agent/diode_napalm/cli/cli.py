@@ -103,7 +103,7 @@ def start_agent(cfg: Diode, workers: int):
 
     """
     client = Client()
-    client.init_client(target=cfg.config.target, api_key=cfg.config.api_key)
+    client.init_client(target=cfg.config.target, client_id=cfg.config.client_id, client_secret=cfg.config.client_secret)
     for policy_name in cfg.policies:
         start_policy(policy_name, cfg.policies.get(policy_name), workers)
 
